@@ -32,6 +32,10 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 header h1 {
@@ -131,7 +135,7 @@ header h1 {
  }
 /*-----pie de pagina-----*/
  footer {
-    background-color: #0d0d0d;
+    background-color: #181818;
     color: beige;
     text-align: center;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
