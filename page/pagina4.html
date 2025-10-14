@@ -29,23 +29,23 @@
         <p>Completa con tus datos y empecemos</p>
         <div class="section-advice">
             <label for="Nombre">Nombre</label>
-            <input type="text" id="Nombre" name="Nombre"> 
+            <input type="text" id="Nombre" name="Nombre" required> 
             <label for="Genero">Genero</label>
-            <select name="Genero" id="Genero">
+            <select name="Genero" id="Genero" required>
                 <option value="" disabled selected>selecciona tu genero</option>
                 <option value="Hombre">Hombre</option>
                 <option value="Mujer">Mujer</option>
             </select>
             <label for="Edad">Edad</label>
-            <input type="number" id="Edad" name="Edad" min="18" max="60">
+            <input type="number" id="Edad" name="Edad" min="18" max="60" required>
             <label for="Altura">Altura en m</label>
-            <input type="text" name="Altura" id="Altura" min="1.20" step="0.1" placeholder="Ej: 1.70">
+            <input type="text" name="Altura" id="Altura" min="1.20" step="0.1" placeholder="Ej: 1.70" required>
             <label for="Peso">Peso en Kg</label>
-            <input type="number" name="Peso" id="Peso" min="30kg" max="200" step="0.1" placeholder="Ej:80.5">
+            <input type="number" name="Peso" id="Peso" min="30kg" max="200" step="0.1" placeholder="Ej:80.5" required>
             <label for="objetivos">objetivos</label>
-            <textarea name="objetivos" id="objetivos" placeholder="Ej: Quiero definir o quiero ganar masa muscular"></textarea>
+            <textarea name="objetivos" id="objetivos" placeholder="Ej: Quiero definir o quiero ganar masa muscular" required></textarea>
             <label for="Asesoria">Asesoria</label>
-            <select name="Plan" id="Plan">
+            <select name="Plan" id="Plan" required>
                 <option value="" disabled selected>Elige tu asesoria</option>
                 <option value="Online">Online</option>
                 <option value="Presencial">Presencial</option>
