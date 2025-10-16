@@ -16,14 +16,3 @@
     animation: fadeup 1s ease forwards;
 }
 
-
-/* Animación fade para rotar las imágenes */
-@keyframes fade-rotate {
-  0%, 49.999% { opacity: 1; }  /* visible la primera mitad */
-  50%, 100% { opacity: 0; }    /* invisible la segunda mitad */
-}
-
-.fade-rotate {
-  opacity: 0;
-  animation: fade-rotate 8s infinite; /* duración total 8s, cada imagen visible 4s */
-}
