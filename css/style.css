@@ -1,3 +1,33 @@
+@charset "UTF-8";
+@keyframes fadeup {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fade-up, main, .section-container section {
+  opacity: 0;
+  animation: fadeup 1s ease forwards;
+}
+
+/* Animación fade para rotar las imágenes */
+@keyframes fade-rotate {
+  0%, 49.999% {
+    opacity: 1;
+  } /* visible la primera mitad */
+  50%, 100% {
+    opacity: 0;
+  } /* invisible la segunda mitad */
+}
+.fade-rotate {
+  opacity: 0;
+  animation: fade-rotate 8s infinite; /* duración total 8s, cada imagen visible 4s */
+}
+
 /*Global*/
 * {
   margin: 0;
@@ -300,6 +330,63 @@ footer a {
 }
 footer a:hover {
   color: #DC143C;
+}
+
+.cambio {
+  width: 100%;
+  padding: 30px 5%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  justify-content: center;
+  border-radius: 10px;
+}
+.cambio .grid-transformacion {
+  position: relative;
+  width: 100%;
+  max-width: 380px;
+  height: 600px;
+  margin: 0 auto 40px auto;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px #FFFFFF;
+}
+.cambio .grid-transformacion img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  animation: fade-rotate 8s infinite;
+}
+.cambio .grid-transformacion img:first-child {
+  animation-delay: 0s;
+}
+.cambio .grid-transformacion img:last-child {
+  animation-delay: 4s;
+}
+
+/* Animación para rotar las imágenes */
+@keyframes fade-rotate {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 1;
+  }
+  55% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
