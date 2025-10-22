@@ -22,12 +22,10 @@ body {
 
 header {
     background-color: $color-negro;
-    color: $color-blanco;
     padding: 15px 30px;
+    align-items: center;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    position: sticky;
     top: 0;
     width: 100%;
     z-index: 1000;
@@ -37,8 +35,8 @@ header {
     }
 
     img {
-        width: 70px;
-        height: auto;
+        width: 1000px;
+        height: 100px;
         padding: 2px;
     }
     .logo {
@@ -46,29 +44,42 @@ header {
         align-items: center;
         gap: 10px;
     }
+
+    .navbar-toggler {
+        border: 1px solid $color-blanco;
+    }
     
-    nav {
-        ul {
-            list-style: none;
+    .navbar {
+        background-color: $color-negro;
+        padding: 10px 20px;
 
-            li {
-                display: inline;
-                margin-left: 15px;
+        .navbar-toggler {
+            border: 1px solid $color-blanco;
+        }
 
-                a {
-                    color: $color-blanco;
-                    text-decoration: none;
-                    font-size: 15px;
-                    font-weight: 600;
-                    cursor: pointer;
-                    transition: color 0.3s ease;
+        nav {
+            ul {
+                list-style: none;
+                display: flex;
+                margin: 0;
+                padding: 0;
 
-                    &:hover {
-                        color: $color-rojo;
+                li {
+                    margin-left: 15px;
+
+                    a {
+                        text-decoration: none;
+                        color: $color-blanco;
+                        transition: 0.3s;
+                        cursor: pointer;
+
+                        &:hover {
+                            color: $color-rojo;
+                        }
                     }
                 }
             }
-        } 
+        }
     }
 }
 
@@ -354,6 +365,8 @@ footer {
     }
 }
 
+/*Imagenes de cambio fisico*/
+
 .cambio {
     width: 100%;
     padding: 30px 5%;
@@ -368,8 +381,8 @@ footer {
     .grid-transformacion {
         position: relative;
         width: 100%;
-        max-width: 380px; // ajustá según necesites
-        height: 600px;     // mismo alto para todas
+        max-width: 380px; 
+        height: 600px;     
         margin: 0 auto 40px auto;
         border-radius: 15px;
         overflow: hidden;
@@ -405,3 +418,49 @@ footer {
   100% { opacity: 0; }
 }
 
+/*------------------RESPONSIVE------------------*/
+@media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    text-align: center;
+
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+
+  main, 
+  .section-container,
+  .section-advice,
+  footer {
+    padding: 20px;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  p {
+    font-size: 16px;
+  }
+
+  .grid-content,
+  .grid-container,
+  .cambio {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .img-about img {
+    width: 100%;
+    height: auto;
+  }
+}
