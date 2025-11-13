@@ -6,7 +6,7 @@ while (continuar) {
         "Bienvenido/a a la tienda de suplementos Primal:\n\n" +
         "1. Proteína Whey ($36000)\n" +
         "2. Creatina ($32000)\n" +
-        "3. Omega ($24000)3\n" +
+        "3. Omega ($24000)\n" +
         "4. Ganador de masa ($48000)\n" +
         "5. Salir"
     );
