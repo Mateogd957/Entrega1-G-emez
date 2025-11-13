@@ -24,9 +24,30 @@ while (continuar) {
         total += 48000;
         console.log("Su total es de $" + total);
     } else if (eleccion === "5") {
-        console.log("Gracias por visitarnos, su total es de $" + total);
+        let totalconEnvio = calcularTotalconEnvio(total);
+        mostrarResumen(total, totalconEnvio);
         continuar = false;
     } else {
         alert("Opción no válida");
     }
+}
+
+function calcularTotalconEnvio(subtotal) {
+    let costoenvio;
+    if (subtotal >= 60000) {
+        costoenvio = 0
+    }else {
+        costoenvio = 7000
+    }
+    return subtotal + costoenvio;
+}
+
+function mostrarResumen (total, totalconEnvio) {
+    let costoenvio = totalconEnvio - total;
+    alert(
+        "Resumen de tu compra \n" +
+        "Subtotal: $" + total + "\n" +
+        "Costo de envío: $" + costoenvio + "\n" +
+        "Total final: $" + totalconEnvio
+    );
 }
