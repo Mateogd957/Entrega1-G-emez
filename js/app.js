@@ -36,6 +36,9 @@ function calcularTotalconEnvio(subtotal) {
     let costoenvio;
     if (subtotal >= 60000) {
         costoenvio = 0
+    }
+    if (subtotal === 0){
+        costoenvio = 0
     }else {
         costoenvio = 7000
     }
